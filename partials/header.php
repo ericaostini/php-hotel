@@ -15,17 +15,24 @@ include __DIR__ . '/../Model/data.php';
 </head>
 
 <body>
-    <header class="container">
-        <h1>PHP Hotel</h1>
-        <form action="index.php" method="GET" class="w-25 gy-2">
-            <h6>Filtra per disponibilità parcheggio</h6>
-            <div class="d-flex">
-                <select class="form-select" aria-label="Default select example" name="parking">
-                    <option value="all">All</option>
-                    <option value="0">Non Disponibile</option>
-                    <option value="1">Disponibile</option>
-                </select>
-                <button class="btn btn-outline-primary" type="submit">Cerca</button>
-            </div>
-        </form>
+    <header class="container text-center">
+        <h1 class="m-4">PHP Hotel</h1>
+        <div class="d-flex justify-content-evenly m-3">
+            <form action="index.php" method="GET" class="w-25 gy-2">
+                <h6>Filtra per disponibilità parcheggio</h6>
+                <div class="d-flex">
+                    <select class="form-select" aria-label="Default select example" name="parking">
+                        <option value="all">All</option>
+                        <option value="0">Non Disponibile</option>
+                        <option value="1">Disponibile</option>
+                    </select>
+                    <button class="btn btn-outline-primary" type="submit">Cerca</button>
+                </div>
+                <h6>Filtra per voto</h6>
+                <div class="d-flex">
+                    <input type="text" class="form-control" placeholder="Voto" name="vote">
+                    <button class="btn btn-outline-primary" type="submit">Cerca</button>
+                </div>
+            </form>
+        </div>
     </header>

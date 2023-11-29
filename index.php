@@ -17,23 +17,29 @@ include __DIR__ . '/partials/header.php';
             </thead>
             <tbody class="table-group-divider">
                 <?php foreach ($hotels as $hotel) { ?>
-                <tr>
-                    <td>
-                        <?php echo $hotel["name"] ?>
-                    </td>
-                    <td>
-                        <?php echo $hotel["description"] ?>
-                    </td>
-                    <td>
-                        <?php echo $hotel["parking"] ?>
-                    </td>
-                    <td>
-                        <?php echo $hotel["vote"] ?>
-                    </td>
-                    <td>
-                        <?php echo $hotel["distance_to_center"] ?>
-                    </td>
-                </tr>
+                    <tr>
+                        <td>
+                            <?php echo $hotel["name"] ?>
+                        </td>
+                        <td>
+                            <?php echo $hotel["description"] ?>
+                        </td>
+                        <?php if ($hotel["parking"] === true) { ?>
+                            <td>
+                                <span class="btn btn-success">Disponibile</span>
+                            </td>
+                        <?php } else { ?>
+                            <td>
+                                <span class="btn btn-danger">Non Disponibile</span>
+                            </td>
+                        <?php } ?>
+                        <td>
+                            <?php echo $hotel["vote"] ?>
+                        </td>
+                        <td>
+                            <?php echo $hotel["distance_to_center"] ?>
+                        </td>
+                    </tr>
                 <?php } ?>
             </tbody>
         </table>

@@ -1,5 +1,10 @@
 <?php
 include __DIR__ . '/partials/header.php';
+if (isset($_GET["parking"])) {
+    $parking = $_GET['parking'];
+    // var_dump($parking);
+    $hotels = array_filter($hotels, fn($hotel) => $parking === 'all' || $hotel['parking'] == $parking);
+}
 ?>
 
 

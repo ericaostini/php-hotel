@@ -1,10 +1,6 @@
 <?php
 include __DIR__ . '/../Model/data.php';
 // var_dump($hotels);
-if (isset($_GET["parking"])) {
-    $parking = $_GET['parking'];
-    var_dump($parking);
-}
 ?>
 
 <!DOCTYPE html>

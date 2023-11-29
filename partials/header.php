@@ -1,3 +1,8 @@
+<?php
+include __DIR__ . '/../Model/data.php';
+// var_dump($hotels);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
